@@ -27,8 +27,3 @@ function saveOptions() {
 	
 	chrome.extension.getBackgroundPage().getPopup();
 }
-
-function eraseOptions() {
-	localStorage.removeItem("favColor");
-	location.reload();
-}
