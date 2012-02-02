@@ -1,0 +1,14 @@
+{
+  "name": "Picture Book",
+  "version": "0.1",
+  "description": "Grab linked pictures from a web page",
+  "options_page": "options.html",
+  "background_page": "background.html",
+  "page_action": {
+    "default_icon": "icon.png"
+  },
+  
+  "permissions": [
+    "tabs"
+  ]
+}

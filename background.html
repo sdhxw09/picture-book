@@ -1,0 +1,14 @@
+<script>
+
+    chrome.tabs.onSelectionChanged.addListener(function (tabId) {
+        var lastTabId = tabId;
+        chrome.tabs.get(tabId, function(tab) {
+            var tabUrl = tab.url;
+            console.log(tabUrl);
+            if (tabUrl.indexOf('http://www.engadget.com/') != -1) {
+                chrome.pageAction.show(lastTabId);
+            }
+        });
+    });
+
+</script>
