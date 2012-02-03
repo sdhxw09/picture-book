@@ -9,6 +9,7 @@
   },
   
   "permissions": [
-    "tabs"
+    "tabs",
+    "http://www.engadget.com/*"
   ]
 }

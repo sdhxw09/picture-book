@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+
 <script>
 
     chrome.tabs.onSelectionChanged.addListener(function (tabId) {
@@ -12,7 +14,7 @@
     });
 
     chrome.pageAction.onClicked.addListener(function(tab) {
-
+        chrome.tabs.executeScript(null, {file: "content.js"});
     });
 
 </script>
