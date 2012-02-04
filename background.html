@@ -1,4 +1,4 @@
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
 
 <script>
 
@@ -14,7 +14,11 @@
     });
 
     chrome.pageAction.onClicked.addListener(function(tab) {
-        chrome.tabs.executeScript(null, {file: "content.js"});
+        chrome.tabs.sendRequest(tab.id, {});
+    });
+
+    chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+        console.log(request.imageUrl);
     });
 
 </script>
